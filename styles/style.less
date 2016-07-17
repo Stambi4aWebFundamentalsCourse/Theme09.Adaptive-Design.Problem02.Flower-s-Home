@@ -1,0 +1,205 @@
+﻿@nav-itemsbg-color: #EB2A7B;
+body 
+{
+    background-image: url("images/background-flowers.jpg");
+    #wrapper {
+        display: flex;
+        width: 60%;
+        margin: auto;
+        flex-flow: row wrap;
+        font-size: 14px;
+        font-family:Arial, Helvetica, sans-serif;
+        > * {
+            border: 1px solid black;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1em;
+        }
+        header {
+            width:100%;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-end;
+            padding: 2%;
+            h1 {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    img {
+                        width: 30%;
+                    }
+                }
+            }  
+            nav {
+                width: 80%;
+                ul {
+                    li{
+                        display: inline-block;
+                        width:19%;
+                        background-color: @nav-itemsbg-color;
+                        padding: 2%;
+                        border: 1px solid black;
+                        a {
+                            text-decoration: none;
+                            display: block;
+                            color: white;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+                    } 
+                }
+            }   
+        }
+        aside.left {
+            padding: 1%;
+            height: 350px;
+            order: 1;
+            flex: 1 0px;
+            ul {
+                display: inline;
+                list-style-type: none;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        section {
+            height: 100%;
+            order: 2;
+            flex: 3 0px;
+            padding-bottom: 1em;
+            article {
+                header {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content:flex-start;
+                    h1 {
+                        font-size: 1.4em;
+                    }
+                }
+                div {
+                    display: flex;
+                    flex-flow:row wrap;
+                    justify-content:space-between;
+                    padding: 0.5%;
+                    img {
+                        width: 23%;
+                        margin: 0.1em;
+                    }
+                }
+            }
+            
+        }
+        aside.right {
+            padding: 1%;
+            height: 350px;
+            order: 3;
+            flex: 1 0px;
+            ul {
+                list-style-type: none;
+                display: inline;
+                li {
+                    display: block;
+                }
+            }
+        }
+        footer {
+            order: 4;
+            flex: 1 100%;
+            h2 {
+                text-align: center;
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:960px) {
+    body {
+       #wrapper {
+           width: 100%;
+
+           section {
+               article {
+                   div {
+                       img {
+                            width: 30%;
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
+
+@media only screen and (max-width:780px) {
+    body {
+       #wrapper > *{
+           flex: 1 100%;
+        }
+        aside.left {
+            order: 2
+        }
+        section {
+            order: 1;
+        }
+        aside.right {
+            order: 3;
+        }
+    }
+}
+
+@media only screen and (max-width:640px) {
+    body {
+       #wrapper {
+           width: 100%;
+           header {
+               h1 {
+                   a {
+                       display: flex;
+                       flex-direction: column;
+                       img {
+                           margin: 0 auto;
+                       }
+
+                       span {
+                           margin: 0 auto;
+                       }
+                   }
+               }
+               nav {
+                   margin: 0 auto;
+                   margin-bottom: 20px;
+                   width: 90%;
+                   ul {
+                       display: inline;
+                       li {
+                           border-collapse: collapse;
+                           display: block;
+                           margin: 0 auto;
+                           width: 90%;
+                       }
+                   }
+               }
+           }
+           section {
+               article {
+                   div {
+                       img {
+                            width: 45%;
+                       }
+                   }
+               }
+           }
+       }
+    }
+}
+
