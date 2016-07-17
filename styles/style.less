@@ -142,18 +142,23 @@ body
 
 @media only screen and (max-width:780px) {
     body {
-       #wrapper > *{
-           flex: 1 100%;
-        }
-        aside.left {
-            order: 2
-        }
-        section {
-            order: 1;
-        }
-        aside.right {
-            order: 3;
-        }
+        #wrapper {
+            aside.left {
+            flex: 1 100%;
+               order: 2;
+               height: auto;
+               padding-bottom: 20px;
+            }
+            section {
+                flex: 1 100%;
+                order: 1;
+            }
+            aside.right {
+                flex: 1 100%;
+                order: 3;
+                height: auto;
+            }
+        } 
     }
 }
 

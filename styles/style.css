@@ -118,17 +118,20 @@ body #wrapper footer h2 a {
   }
 }
 @media only screen and (max-width: 780px) {
-  body #wrapper > * {
+  body #wrapper aside.left {
     flex: 1 100%;
-  }
-  body aside.left {
     order: 2;
+    height: auto;
+    padding-bottom: 20px;
   }
-  body section {
+  body #wrapper section {
+    flex: 1 100%;
     order: 1;
   }
-  body aside.right {
+  body #wrapper aside.right {
+    flex: 1 100%;
     order: 3;
+    height: auto;
   }
 }
 @media only screen and (max-width: 640px) {
